@@ -157,7 +157,7 @@ See about [`customMailFunction`](#custom-mail-function).
 
 # Inbuilt Configuration and Methods
 
-## Methods
+## Methodss
 
 ### User.signupAuth( data, req)
     POST /api/user/signupAuth
