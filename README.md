@@ -162,6 +162,7 @@ See about [`customMailFunction`](#custom-mail-function).
 ### User.signupAuth( data, req)
     POST /api/user/signupAuth
 Allows user to signup
+
 |Parameter| Type| Description | Required|
 |--|--|--|--|
 | data | object | User data which will contain email/password and other neccessary information for user.|email or phone
