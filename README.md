@@ -136,7 +136,7 @@ Now **successRedirect** for Google strategy will be **`/{serverURL}/custom-path`
 	
 ## Preparing User model
 
-This component comes with **predefined User Model** named `UserAuth` which inherits loopbacks User Schema along with its definition.
+This component comes with predefined User Model named `UserAuth` which inherits loopbacks User Schema along with its definition.
 
 To use this model add the following to `model-config.json`
 
