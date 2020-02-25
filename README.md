@@ -173,7 +173,7 @@ See about [`beforeMessageFn`](#beforeMessageFn).
 
 ## Methods
 
-### User.signupAuth( data, req)
+### User.signupAuth(data, req)
     POST /api/user/signupAuth
 Allows user to signup
 
@@ -207,7 +207,7 @@ countryCode will be set to `defaultCountryCode` if provided. See [Passport-OTP L
 If OTP strategy is enabled and `verificationRequired` flag is set. This method will send OTP to the `defaultOTPVia` which might be _email or phone_ else it will send otp to both if provided.
 **If you want to modify the data which is being sent by OTP message, check out [Modifying verification email](#beforemessagefn).**
 
-### User.updatePhone( countryCode, phone, req) 
+### User.updatePhone(countryCode, phone, req) 
 
     GET	/api/user/updatePhone
     AccessToken Required
@@ -223,7 +223,7 @@ OTP will be sent if strategy has `verificationRequired` is set to true. Otherwis
 If verification was required OTP will be sent to given phone number,
 `Twilio` model is needed to be setup along with Twilio datasource configuration in order for this to work.
 
-### User.updatePhoneWithToken( countryCode, phone, token, req)
+### User.updatePhoneWithToken(countryCode, phone, token, req)
 
     GET	/api/user/updatePhoneWithToken
     AccessToken Required
@@ -236,7 +236,7 @@ Update phone using token which was sent from `User.updatePhone`.
 | token | number | Token which was recieved with phone number|true
 | req| object| httpRequest object| true
 
-### User.updateEmail( email, req)
+### User.updateEmail(email, req)
 
     GET	/api/user/updateEmail
     AccessToken Required
@@ -248,7 +248,7 @@ OTP will be sent on email if strategy has `verificationRequired` set to true.
 | email | string | User's email.|true
 | req| object| httpRequest object| true
 
-### User.updateEmailWithToken( email, token, req)
+### User.updateEmailWithToken(email, token, req)
 
     GET	/api/user/updateEmailWithToken
     AccessToken Required
@@ -260,7 +260,7 @@ Update email using token which was sent from `User.updateEmail`.
 | token | number | Token which was recieved with email.|true
 | req| object| httpRequest object| true
 
-### User.updatePassword( oldPassword, newPassword ,defaultOTPVia , req)
+### User.updatePassword(oldPassword, newPassword ,defaultOTPVia , req)
 
     GET	/api/user/updatePassword
     AccessToken Required
@@ -274,7 +274,7 @@ OTP will be sent if strategy has `verificationRequired` set to true.
 | defaultOTPVia | string | OTP via email/phone |false
 | req| object| httpRequest object| true
 
-### User.updatePasswordWithToken( oldPassword,  newPassword, token, req)
+### User.updatePasswordWithToken(oldPassword,  newPassword, token, req)
 
     GET	/api/user/updatePasswordWithToken
     AccessToken Required
@@ -287,7 +287,7 @@ Update password with token which was sent from `User.updatePassword`.
 | token | number | Token recieved via email/phone.|true
 | req| object| httpRequest object| true
 
-### User.sendToken( data, req)
+### User.sendToken(data, req)
 
     GET	/api/user/sendToken
     AccessToken Required
@@ -323,7 +323,7 @@ Generates an CSV containing data from all user's data after applying filter (if 
 | filter | object | Filter `{"where":{...}}` |false
 | res| object| httpResponse object| true
 
-### User.updateSensitiveData( data, token, req)
+### User.updateSensitiveData(data, token, req)
 
     POST	/api/user/updateSensitiveData
     Admin API
@@ -334,7 +334,7 @@ Updates user's sensitive data which are provided in `authConfig.json` .
 | filter | object | Filter `{"where":{...}}` |false
 | res| object| httpResponse object| true
 
-### User.sendMessage( medium, mediumValue, data)
+### User.sendMessage(medium, mediumValue, data)
     Can be accessed via User Model.
 
 This function can be used to send message to a specific medium email/phone. This method will uses [beforeMessageFn](#beforeMessageFn) as an mediator which enables programmer to set customized email/phone templates before message is being sent.
@@ -356,7 +356,7 @@ This function can be used to send message to a specific medium email/phone. This
 	    }
 	 })
 
-### User.setMessageMedium( medium, cb(mailOptions))
+### User.setMessageMedium(medium, cb(mailOptions))
 
      Set custom provider for email/phone.
 |Parameter| Type| Description | Required|
